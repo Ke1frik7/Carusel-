@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    display: flex;/*ichida gi content ni urtaga olib kelish uchun ... */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Aytilishicha bu yozilmasa align-items ishlamaydi*/
+    overflow: hidden;
+}
+.container{
+    box-shadow: 2px 2px 5px black ;
+    overflow: hidden; 
+    /* Bu orqali sochilib ya'ni bizg x uqidan tashqarida kurinib  turgan rasmlarni yashirib quyamiz  */
+    height: 530px;
+    width: 500px;
+
+}
+.image-container{
+    display: flex;
+    transition: 0.5s ease-in-out;/* Bu rasmlarni utib turishi uchun ta'minlab beradi ....*/
+    transform: translateX(500); /*Buning manosi rasmlar orasidagi bushliq ya'ni yon tomonlama bulgannan keyin uzilib qolmaydi ammmo rasmlar chuzilishi mumkin usha rasmlar bir conntainerda yozilgan bulsa unda ular hammasini birdaniga surib yuboradi ... ... */
+
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+button{
+    border:none;
+    background-color: blueviolet;
+    color: #Fff;
+    cursor: pointer;/* Buning ma'nosi cursor kelsanda pointer yani Algorithmga tashlaydigan bulsak bu uni sezish degan ma'noni bildiradi...*/
+    padding: 0.5rem;
+    width: 49%;
+}
+button:hover{
+    opacity: 0.90;
+    background-color: yellowgreen;
+    transition: 2s ease;
+}
+button:focus{
+    outline: none;
+}
+img{
+    object-fit: cover; /*Bu code ma'nosi rasmni sifati uzgarmaydi lekin shu razmerda joylashadi dgan ma'noni bildiradi ...*/
+    height: 500px;
+    width: 500px;
+}
